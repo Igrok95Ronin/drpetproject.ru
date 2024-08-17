@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  outline: none;
+  font-family:
+      "Roboto",
+      system-ui,
+      -apple-system,
+      sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+body{
+  margin: auto;
+  padding: 0;
+  max-width: 1920px;
+  min-width: 320px;
+  color: #000;
+}
+.container {
+  max-width: var(--maxWidth);
+  margin: 0 auto;
+  padding: 0 15px;
+}
+:root{
+  --maxWidth: 1200px;
+  --mainColorBlue: #0472b9;
+  --mainColorRed: #cf2a28;
+  --mainColorFooter: #00abe6;
+}

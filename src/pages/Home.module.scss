@@ -1,0 +1,129 @@
+.petProjects {
+    position: relative;
+    top: 84px;
+    padding: 50px 10px;
+}
+.petProjects::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background: linear-gradient(to right, var(--mainColorBlue) 50%, var(--mainColorRed) 50%); */
+    /* background-color: var(--mainColorRed); */
+    z-index: -1;
+    filter: blur(10px); /* Создаем эффект размытия для градиента, похожий на тень */
+    opacity: 0.1; /* Можно регулировать прозрачность градиента */
+}
+.container {
+}
+.petProjects__box {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.petProjects__inner {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    padding: 20px;
+    border-width: 2px;
+    border-style: solid;
+    border-image: linear-gradient(to right, var(--mainColorBlue) 50%, var(--mainColorRed) 50%) 1;
+}
+.petProjects__left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+.petProjects__imgWrp {
+    max-width: 400px;
+    // aspect-ratio: 1.5;
+    max-height: 266px;
+}
+.petProjects__img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+.petProjects__name {
+    border-width: 2px;
+    border-style: solid;
+    border-image: linear-gradient(to right, var(--mainColorBlue) 50%, var(--mainColorRed) 50%) 1;
+    padding: 0 10px;
+    transition: 0.3s;
+}
+.petProjects__name:hover {
+    border-image: linear-gradient(to right, var(--mainColorRed) 50%, var(--mainColorBlue) 50%) 1;
+}
+.petProjects__name > a {
+    display: block;
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--mainColorBlue) !important;
+    text-align: center;
+}
+.petProjects__right {
+    /* border: 2px;
+    border-style: solid;
+    border-image: linear-gradient(to right, var(--mainColorBlue) 50%, var(--mainColorRed) 50%) 1; */
+    padding: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+.petProjects__stack {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+    color: #fff;
+    background-color: var(--mainColorRed);
+    letter-spacing: 5px;
+    border-radius: 5px 5px 0 0;
+    padding: 5px;
+}
+.petProjects__ul {
+    color: var(--mainColorBlue);
+    font-weight: 600;
+    border: 2px solid var(--mainColorRed);
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    border-radius: 0 0 5px 5px;
+}
+.petProjects__ul > li {
+    border: 2px solid var(--mainColorFooter);
+    padding: 5px;
+}
+.petProjects__ul > li > span {
+    color: var(--mainColorRed);
+}
+
+// Media
+@media (max-width: 1024px) {
+    .petProjects__ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .petProjects__inner {
+        grid-template-columns: 1fr;
+    }
+    .petProjects__imgWrp {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .petProjects__ul {
+        grid-template-columns: 1fr;
+    }
+}
