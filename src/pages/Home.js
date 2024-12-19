@@ -23,7 +23,7 @@ const Home = ({ items }) => {
                       <img
                         className={style.petProjects__img}
                         src={item.img}
-                        alt="todolist"
+                        alt=""
                       />
                     </a>
                   </div>
