@@ -28,13 +28,14 @@ function App() {
                       stacks: {
                         Frontend: "React",
                         Backend: "Golang",
-                        Architecture: "Monolithic",
-                        DB: "SQLite, Gorm",
+                        Architecture: "Microservice",
+                        Container: "Docker, Compose",
+                        CORS: "Go CORS",
                         Router: "Httprouter",
+                        DB: "PostgreSQL, Gorm",
                         Config: "Cleanenv",
                         Logger: "Logrus",
-                        Testing: "Goconvey",
-                        Registration: "JWT",
+                        GIT: ""
                       },
                     },
                     {

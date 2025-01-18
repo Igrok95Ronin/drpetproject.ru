@@ -1,8 +1,8 @@
-import React from 'react';
-import { nanoid } from 'nanoid';
+import React from "react";
+import { nanoid } from "nanoid";
 
-import style from './Home.module.scss';
-import '../App.scss';
+import style from "./Home.module.scss";
+import "../App.scss";
 
 const Home = ({ items }) => {
   return (
@@ -20,11 +20,7 @@ const Home = ({ items }) => {
                   </p>
                   <div className={style.petProjects__imgWrp}>
                     <a href={item.link} target="__blank">
-                      <img
-                        className={style.petProjects__img}
-                        src={item.img}
-                        alt=""
-                      />
+                      <img className={style.petProjects__img} src={item.img} alt="" />
                     </a>
                   </div>
                 </div>
@@ -34,6 +30,15 @@ const Home = ({ items }) => {
                     {Object.entries(item.stacks).map(([key, value]) => (
                       <li key={nanoid()}>
                         {key}: <span>{value}</span>
+                        {key === "GIT" && (
+                          <a
+                            className={style.specialLink}
+                            target="__blank"
+                            href="https://github.com/Igrok95Ronin/todolist.drpetproject.ru-api.git"
+                          >
+                            To-do list
+                          </a>
+                        )}
                       </li>
                     ))}
                   </ul>

@@ -1,0 +1,7 @@
+services:
+  # Контайнер платформы
+  frontend_drpetproject.ru:
+    image: igrok095/drpetproject.ru:prod.v.2
+    container_name: drpetproject.ru
+    ports:
+      - 80:80

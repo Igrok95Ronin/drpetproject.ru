@@ -1,0 +1,54 @@
+services:
+  # Контайнер платформы
+  frontend_drpetproject.ru:
+    image: drpetproject.ru:dev.v.3
+    container_name: drpetproject.ru
+    # ports:
+    #   - 80:80
+
+  # To-do list без JWT DB
+  dbTodolist:
+    restart: always
+    image: postgres:15.2
+    environment:
+      POSTGRES_USER: todolistSuperUser
+      POSTGRES_PASSWORD: todolistSuperPassword
+      POSTGRES_DB: todolistDB
+    ports:
+      - 5433:5432
+    volumes:
+      - pgdatatodolist:/var/lib/postgresql/data
+      - ./migrations/todolist/createtable.sql:/docker-entrypoint-initdb.d/createtable.sql
+      - ./migrations/todolist/inserttable.sql:/docker-entrypoint-initdb.d/inserttable.sql
+    networks:
+      - drpetproject-network
+
+  # To-do list без JWT API
+  apiTodolist:
+    image: todolistdrpetprojectapi:v.1.0
+    container_name: todolistapi
+    ports:
+      - 8080:8080
+    networks:
+      drpetproject-network:
+    depends_on:
+      - dbTodolist
+
+  # To-do list без JWT WEB
+  webTodoList:
+    image: todolistdrpetprojectweb:v.1.0
+    container_name: todolistweb
+    # ports:
+    #   - 81:80
+    networks:
+      drpetproject-network:
+    depends_on:
+      - apiTodolist
+
+volumes:
+  pgdatatodolist:
+    name: pgdatatodolist # To-do list без JWT Volumes для сохранности данных
+
+networks:
+  drpetproject-network:
+    driver: bridge
