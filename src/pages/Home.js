@@ -31,12 +31,8 @@ const Home = ({ items }) => {
                       <li key={nanoid()}>
                         {key}: <span>{value}</span>
                         {key === "GIT" && (
-                          <a
-                            className={style.specialLink}
-                            target="__blank"
-                            href="https://github.com/Igrok95Ronin/todolist.drpetproject.ru-api.git"
-                          >
-                            To-do list
+                          <a className={style.specialLink} target="__blank" href={item.gitLink}>
+                            {item.name}
                           </a>
                         )}
                       </li>

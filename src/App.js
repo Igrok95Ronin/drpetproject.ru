@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import Resume from "./pages/Resume";
 
 import todolistImage from "./assets/img/todolist.png";
-import ticTacToeImage from "./assets/img/tic-tac-toe-icon-1024x1024-bmwf454z.png";
+import todolistjwtImage from "./assets/img/todolistjwt.png";
 
 import "./App.scss";
 
@@ -35,25 +35,28 @@ function App() {
                         DB: "PostgreSQL, Gorm",
                         Config: "Cleanenv",
                         Logger: "Logrus",
-                        GIT: ""
+                        GIT: "",
                       },
+                      gitLink: "https://github.com/Igrok95Ronin/todolist.drpetproject.ru-api.git",
                     },
                     {
-                      name: "Tic-Tac-Toe",
-                      link: "/",
-                      img: ticTacToeImage,
+                      name: "To-do list JWT",
+                      link: "https://todolistjwt.drpetproject.ru/",
+                      img: todolistjwtImage,
                       stacks: {
                         Frontend: "React",
                         Backend: "Golang",
-                        Architecture: "Monolithic",
-                        DB: "SQLite, Gorm",
+                        Architecture: "Microservice",
+                        Container: "Docker, Compose",
+                        CORS: "Go CORS",
                         Router: "Httprouter",
+                        DB: "PostgreSQL, Gorm",
                         Config: "Cleanenv",
                         Logger: "Logrus",
-                        Testing: "Goconvey",
-                        Registration: "JWT",
-                        Protocol: "WebSocket",
+                        Authentication: "JWT",
+                        GIT: "",
                       },
+                      gitLink: "https://github.com/Igrok95Ronin/todolistjwt.drpetproject.ru-api",
                     },
                   ]}
                 />
