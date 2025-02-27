@@ -6,6 +6,7 @@ import Resume from "./pages/Resume";
 
 import todolistImage from "./assets/img/todolist.png";
 import todolistjwtImage from "./assets/img/todolistjwt.png";
+import coffeshopImage from "./assets/img/coffeshop.png";
 
 import "./App.scss";
 
@@ -57,6 +58,26 @@ function App() {
                         GIT: "",
                       },
                       gitLink: "https://github.com/Igrok95Ronin/todolistjwt.drpetproject.ru-api",
+                    },
+                    {
+                      name: "Coffe shop",
+                      link: "https://coffeshop.drpetproject.ru/",
+                      img: coffeshopImage,
+                      stacks: {
+                        Frontend: "React",
+                        Backend: "Golang",
+                        Architecture: "Microservice",
+                        Container: "Docker, Compose",
+                        CORS: "Go CORS",
+                        Router: "Httprouter",
+                        DB: "PostgreSQL, Gorm",
+                        Config: "Cleanenv",
+                        Logger: "Logrus",
+                        Authentication: "JWT",
+                        Cash: "Redis",
+                        GIT: "",
+                      },
+                      gitLink: "https://github.com/Igrok95Ronin/coffee-shop-drpetproject.ru-api",
                     },
                   ]}
                 />
