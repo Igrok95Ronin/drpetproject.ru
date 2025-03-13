@@ -24,7 +24,7 @@ const Header = () => {
             <span>PET</span>
             <span>PROJECTs</span>
           </div> */}
-          <img src={LogoImg} alt="" class="header__img" />
+          <img src={LogoImg} alt="" className="header__img" />
         </div>
         <nav className="navbar">
           <div className="burger" id="burger" onClick={toggleMenu}>
